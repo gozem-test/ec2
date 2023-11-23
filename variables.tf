@@ -1,3 +1,14 @@
+variable "AWS_ACCESS_KEY_ID" {
+  type = string
+}
+
+variable "AWS_SECRET_ACCESS_KEY" {
+  type = string
+}
+
+variable "AWS_REGION" {
+  type = string
+}
 
 variable "most_recent_ami" {
   type = bool
@@ -24,22 +35,6 @@ variable "instance_profile_name" {
   type = string
 }
 
-variable "create_eip" {
-  type    = bool
-  default = true
-}
-variable "AWS_ACCESS_KEY_ID" {
-  type = string
-}
-
-variable "AWS_SECRET_ACCESS_KEY" {
-  type = string
-}
-
-variable "AWS_REGION" {
-  type = string
-}
-
 variable "instance_name" {
   description = "Name of the instance"
   type        = string
@@ -55,22 +50,11 @@ variable "subnet_id" {
   type        = string
 }
 
-variable "instance_count" {
-  description = "Number of EC2 instances to create"
-  type        = number
-  default     = 1
-}
-
 variable "instance_type" {
   description = "Type of EC2 instance"
   type        = string
   default     = "t2.micro"
 }
-
-# variable "ami_id" {
-#   description = "ID of the desired AMI"
-#   type        = string
-# }
 
 variable "assign_public_ip" {
   type    = bool
