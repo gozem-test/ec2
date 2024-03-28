@@ -15,15 +15,18 @@ variable "most_recent_ami" {
 }
 
 variable "owners" {
-  type = list(string)
+  type    = list(string)
+  default = ["amazon"]
 }
 
 variable "ami_name_filter" {
-  type = string
+  type    = string
+  default = "name"
 }
 
 variable "ami_values_filter" {
-  type = list(string)
+  type    = list(string)
+  default = ["al2023-ami-2023.*-x86_64"]
 }
 
 variable "use_instance_profile" {
@@ -37,11 +40,6 @@ variable "instance_profile_name" {
 
 variable "instance_name" {
   description = "Name of the instance"
-  type        = string
-}
-
-variable "vpc_id" {
-  description = "ID of the VPC"
   type        = string
 }
 
